@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
+      - ELASTICSEARCH_URL=${ELASTICSEARCH_URL}
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+
+  pinecone:
+    image: pinecone/pinecone:latest
+    ports:
+      - "8080:8080"
+  PINECONE_ENVIRONMENT=your-environment-name
+ELASTICSEARCH_URL=http://elasticsearch:9200

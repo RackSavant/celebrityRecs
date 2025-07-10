@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d4af37, #ffd700, #b8860b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.tagline {
+    font-size: 0.9em;
+    color: #ccc;
+    font-style: italic;
+}
+
+.upload-section {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.upload-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.wardrobe-count {
+    text-align: center;
+    color: #d4af37;
+    font-size: 0.9em;
+}
+
+.style-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #8B0000, #DC143C);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.style-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
+}
+
+.suggestion-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.era-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: #000;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.style-title {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.style-description {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.item-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.item-image {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(45deg, #333, #555);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #d4af37;
+}
+
+.item-name {
+    font-size: 0.8em;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-size: 0.9em;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.racksavant-item {
+    border: 2px solid #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.buy-button {
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.buy-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #d4af37;
+}
+
+.loading::after {
+    content: '✨';
+    animation: spin 2s linear infinite;
+    font-size: 2em;
+    display: block;
+    margin-top: 10px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.era-timeline {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.era-chip {
+    padding: 8px 15px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.8em;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.era-chip:hover, .era-chip.active {
+    background: linear-gradient(45deg, #d4af37, #ffd700);
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.inspiration-text {
+    font-style: italic;
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.section-title {
+    color: #d4af37;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 5px;
+}
+
+.era-detection {
+    border: 2px solid #d4af37;
+    background: rgba(212, 175, 55, 0.05);
+    position: relative;
+}
+
+.confidence-meter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.confidence-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #90EE90, #32CD32);
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.historical-context {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border-left: 3px solid #d4af37;
+}
+
+.detected-item {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+    40%, 43% { transform: translateY(-10px); }
+    70% { transform: translateY(-5px); }
+}
+
+.upload-analyzing {
+    background: linear-gradient(45deg, #32CD32, #90EE90);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
